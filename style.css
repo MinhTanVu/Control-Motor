@@ -1,0 +1,262 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto",sans-serif;
+}
+header{
+position: fixed;
+background: #22242A;
+padding: 40px;
+width: 100%;
+height: 0px;
+}
+.sidebar .hinh{
+    width: 120px;
+    height: 120px;
+    border-radius: 80px;
+    margin-top: -70px;
+    margin-left: 30px;
+    transition: 1s;
+}
+.header_center h1{
+    color: #fff;
+    margin-top: -20px;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 900;
+    margin-left: -20px;
+}
+
+.header_center span{
+    color: #1dc4e7;
+}
+.header_center h1:hover{
+    color: #EAD315;
+}
+.sidebar{
+    background:   #22242A;
+    margin-top: 80px;
+    padding-top: 80px;
+    position: fixed;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+}
+.sidebar a{
+color: #fff;
+display: block;
+width: 100%;
+line-height:60px;
+text-decoration: none;
+padding-left: 40px;
+padding-top:20px;
+box-sizing:border-box;
+transition: 0.5s;
+transition-property: background;
+}
+.sidebar a:hover{
+    background: #19B3D3;
+}
+.sidebar i{
+    padding-right: 10px;    
+}
+
+label #sidebar_btn{
+    z-index: 1;
+    color : #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 200px;
+    font-size: 20px;
+    margin-left: 140px;
+    margin-top: -10px;
+    transition: 0.5s;
+    transition-property: color;
+}   
+label #sidebar_btn:hover{
+    color: #19B3D3;
+}
+
+#check:checked ~ .sidebar{
+    left: -120px;
+    margin-top: 80px;
+}
+#check:checked ~ .sidebar .hinh{
+    display: none;
+}
+
+#check:checked ~ .sidebar a span{
+    display: none;
+}
+
+#check:checked ~ .sidebar a{
+    font-size: 20px;
+    margin-left: 100px;
+    width: 80px;
+    margin-top: 50px;
+}
+
+.content{
+    margin-left: 0px;
+    background: url(nen.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+#check:checked ~.content{
+    margin-left:0px;
+}
+#check{
+    display: none;
+}
+.sign_up{
+    width: 500px;
+    height: 400px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin-top: -500px;
+    margin-left: 550px;
+    text-align: center;
+
+}
+.sign_up h1{
+    color: #9F1B06;
+    font-family: sans-serif;
+}
+
+
+.list{
+    margin-top: -500px;
+    margin-left: 350px;
+    font-size: 20px;
+    padding-left: 0px;;
+    text-align: center;
+}
+.control{
+    margin-top: -500px;
+    margin-left: 600px;
+}
+.status{
+    margin-top: 60px;
+}
+.status .Start{
+    margin-left: -80px;
+    width: 90px;
+    height: 90px;
+    background-color: #80e141;
+    border-radius: 90px;
+    font-size: 25px;
+    border: 3px solid #e5e8e8;
+}
+.Start:hover{
+    border: 1px;
+}
+.status .Stop{
+    margin-left: 250px;
+    width: 90px;
+    height: 90px;
+    background-color:  #e15941;
+    border-radius: 90px;
+    font-size: 25px;
+    border: 3px solid #e5e8e8;
+}
+.Stop:hover{
+    border: 1px;
+}
+.direction{
+    margin-top: 60px;
+}
+.direction .Forward{
+    margin-left: -120px;
+    width: 150px;
+    height: 40px;
+    background-color: #e1ac41;
+    border-radius: 50px;
+    font-size: 25px;
+    border: 3px solid #e5e8e8;
+}
+.Forward:hover{
+    border: 1px;
+}
+.direction .Backward{
+    margin-left: 210px;
+    width: 150px;
+    height: 40px;
+    background-color:  #41e1d2;
+    border-radius: 50px;
+    font-size: 25px;
+    border: 3px solid #e5e8e8;
+}
+.Backward:hover{
+    border: 1px;
+}
+.level{
+    margin-top: 70px;
+}
+.level .Low{
+    margin-left: -200px;
+    width: 150px;
+    height: 40px;
+    background-color:   #f6ddcc ;
+    border-radius: 10px;
+    font-size: 25px;
+    border: 3px solid #e5e8e8;
+}
+.Low:hover{
+    border: 1px;
+}
+.level .Medium{
+    margin-left: 110px;
+    width: 150px;
+    height: 40px;
+    background-color:	 #edbb99;
+    border-radius: 10px;
+    font-size: 25px;
+    border: 3px solid #e5e8e8;
+}
+.Medium:hover{
+    border: 1px;
+}
+.level .High{
+    margin-left: 130px;
+    width: 150px;
+    height: 40px;
+    background-color:	  #e59866;
+    border-radius: 10px;
+    border: 3px solid #e5e8e8;
+    font-size: 25px;
+}
+.High:hover{
+    border: 1px;
+}
+.tong h3{
+    margin-left: 450px;
+    margin-top: -500px;
+    font-size: 40px;
+}
+.rasp{
+    margin-left: 250px;
+    width: 250px;
+    height: 250px;
+}
+.l298{
+    margin-left: -10px;
+    width: 250px;
+    height: 250px;
+    margin-top:-550px;
+}
+.dongco{
+    margin-left: -10px;
+    width: 250px;
+    height: 250px;
+    margin-top:-550px;
+}
+.led{
+    margin-left: -10px;
+    width: 250px;
+    height: 250px;
+    margin-top:-550px;
+}

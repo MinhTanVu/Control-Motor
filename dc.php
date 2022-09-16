@@ -1,0 +1,72 @@
+<?php
+
+// doc du lieu tu website
+$x = $_POST["x"];
+//ket noi database
+$server = "localhost";
+$user = "MinhTanVu";
+$password = "01247958968";
+$dbname = "dongco";
+
+$conn = mysqli_connect($server,$user,$password,$dbname);
+//gui data xuong database
+$sql = "insert into dc (x) values ('$x')";
+mysqli_query($conn, $sql);
+// ngat ket noi voi database
+mysqli_close($conn);
+?>
+<!doctype html>
+<html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Control</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="checkbox" id = "check">
+    <header>
+        <label for="check">
+            <i class="fa fa-bars" id = "sidebar_btn"></i>
+        </label>
+        <div class="header_center">
+    
+            <h1>MOTOR <span>CONTROL</span></h1>
+        </div>
+    </header>
+    <div class="sidebar">
+        <img src="vxl.jpg" class="hinh" alt="">
+        <a href="./list.html"><i class="fa fa-user-plus" id = "dk"></i><span>LIST</span></a>
+        <a href="./manage1.html"><i class="fa fa-cog" id = "ds"></i><span>CONTROL</span></a>
+    </div>
+    
+    <div class="content"></div>
+    <div class="control">
+        <h2>CONTROL SYSTEM</h2>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+            <div class="level">
+                <button type="submit" class="Low" name="x" value="l"> Low </button>
+                <button type="submit" class="Medium" name="x" value="m"> Medium </button>
+                <button type="submit" class="High" name="x" value="h"> High </button>   
+            </div>
+            <div class="direction"> 
+                <button type="submit" class="Forward" name="x" value="f"> Forward </button>  
+                <button type="submit" class="Backward" name="x" value="b"> Backward </button>
+            </div> 
+            <div class = "status">
+                <button type="submit" class="Start" name="x" value="r"> Start </button>
+                <button type="submit" class="Stop" name="x" value="s"> Stop </button>
+            </div>                   
+        </form>
+    </div>
+    
+</form>
+</body>
+
+
+
+</html>
